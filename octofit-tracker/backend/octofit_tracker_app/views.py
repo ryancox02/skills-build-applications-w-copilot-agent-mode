@@ -5,6 +5,9 @@ from rest_framework.response import Response
 from .serializers import UserSerializer, TeamSerializer, ActivitySerializer, LeaderboardSerializer, WorkoutSerializer
 from .models import User, Team, Activity, Leaderboard, Workout
 
+# Add the codespace Django REST API endpoint suffix
+CODESPACE_API_ENDPOINT = "-8000.app.github.dev"
+
 @api_view(['GET'])
 def api_root(request, format=None):
     return Response({
